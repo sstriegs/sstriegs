@@ -146,31 +146,18 @@ header {
     height: 16px;
     position: relative;
     transition: transform 0.3s ease;
-}
-
-.toggle-icon::before, .toggle-icon::after {
-    content: '';
-    position: absolute;
-    background-color: #999;
-    transition: transform 0.3s ease;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+    color: #999;
 }
 
 .toggle-icon::before {
-    width: 100%;
-    height: 2px;
-    top: 7px;
-    left: 0;
+    content: '[+]';
 }
 
-.toggle-icon::after {
-    width: 2px;
-    height: 100%;
-    top: 0;
-    left: 7px;
-}
-
-.project-row.expanded .toggle-icon::after {
-    transform: scaleY(0);
+.project-row.expanded .toggle-icon::before {
+    content: '[–]';
 }
 
 .role {
