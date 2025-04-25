@@ -18,7 +18,7 @@ header {
 }
 
 .name-container {
-    max-width: 60%;
+    max-width: 50%;
 }
 
 .name {
@@ -86,7 +86,7 @@ header {
 }
 
 .project-row td {
-    padding: 1.5rem 0;
+    padding: 8px;
     vertical-align: top;
 }
 
@@ -97,10 +97,9 @@ header {
 }
 
 .project {
-    width: 35%;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
+    width: 60%;
+    font-size: 1.4rem;
+    display: block;
 }
 
 .project-title {
