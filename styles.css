@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.name-container {
+    max-width: 60%;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.bio {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.85;
+    max-width: 90%;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background-color: #2a2a2a;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+.table-header {
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 1px;
+}
+
+.table-header th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.5rem 0;
+}
+
+.project-row {
+    border-bottom: 1px solid #222;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.project-row:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.project-row td {
+    padding: 1.5rem 0;
+    vertical-align: top;
+}
+
+.brand {
+    width: 15%;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.project {
+    width: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.project-title {
+    margin-right: 10px;
+}
+
+.toggle-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon::before, .toggle-icon::after {
+    content: '';
+    position: absolute;
+    background-color: #999;
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon::before {
+    width: 100%;
+    height: 2px;
+    top: 7px;
+    left: 0;
+}
+
+.toggle-icon::after {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 7px;
+}
+
+.project-row.expanded .toggle-icon::after {
+    transform: scaleY(0);
+}
+
+.role {
+    width: 20%;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #999;
+}
+
+.links {
+    width: 15%;
+}
+
+.links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.arrow {
+    margin-left: 3px;
+    font-size: 0.9rem;
+}
+
+.year {
+    width: 15%;
+    text-align: right;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.project-details {
+    display: none;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.project-row.expanded + .project-details {
+    display: table-row;
+}
+
+.project-details-content {
+    padding: 0 0 2rem 0;
+}
+
+.project-details-td {
+    padding: 0 !important;
+}
+
+.project-description {
+    padding: 0 0 1.5rem 15%;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    max-width: 900px;
+    color: #bbb;
+    margin: 1rem 0;
+}
+
+.project-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 0 0 0 15%;
+}
+
+.project-thumbnail {
+    aspect-ratio: 16/9;
+    background-color: #2a2a2a;
+    overflow: hidden;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .name-container {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .date {
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .projects-table, .projects-table tbody {
+        display: block;
+    }
+
+    .table-header {
+        display: none;
+    }
+
+    .project-row {
+        padding: 1.5rem 0;
+        display: grid;
+        grid-template-areas:
+            "brand year"
+            "project project"
+            "role role"
+            "links links";
+        grid-template-columns: 1fr auto;
+    }
+
+    .project-row td {
+        display: block;
+        padding: 0.3rem 0;
+    }
+
+    .project-details-td {
+        padding: 0;
+    }
+
+    .brand { grid-area: brand; }
+    .project { grid-area: project; width: 100%; }
+    .role { grid-area: role; width: 100%; }
+    .links { grid-area: links; width: 100%; }
+    .year { grid-area: year; width: auto; }
+
+    .project-description {
+        padding-left: 0;
+    }
+
+    .project-thumbnails {
+        padding-left: 0;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-details {
+        display: none;
+    }
+
+    .project-row.expanded + .project-details {
+        display: block;
+    }
+
+    .project-details-td {
+        grid-column: 1 / -1;
+    }
+}

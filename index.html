@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steven Striegel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="name-container">
+            <h1 class="name">Steven Striegel</h1>
+            <p class="bio">
+              Steven is a designer based in New York City. He’s currently at Condé Nast designing apps and web experiences for The New Yorker, Vogue, Wired, and others. A committed generalist, his work often spans brand identities, interactive websites, and digital product interfaces. Steven also experiments with analog art forms in video, collage, and photography.
+            </p>
+        </div>
+    </header>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Visual artwork">
+        </div>
+        <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Visual artwork">
+        </div>
+        <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Visual artwork">
+        </div>
+        <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Visual artwork">
+        </div>
+        <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Visual artwork">
+        </div>
+        <div class="gallery-item">
+            <img src="/api/placeholder/400/400" alt="Visual artwork">
+        </div>
+    </div>
+
+    <table class="projects-table">
+        <thead>
+            <tr class="table-header">
+                <th class="brand">Brand</th>
+                <th class="project">Project</th>
+                <th class="role">Role</th>
+                <th class="links">Links</th>
+                <th class="year">Year</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="project-row" onclick="toggleDetails(this)">
+                <td class="brand">The New Yorker</td>
+                <td class="project">
+                    <span class="project-title">Laugh Lines</span>
+                    <span class="toggle-icon"></span>
+                </td>
+                <td class="role">Assoc. Design Director</td>
+                <td class="links"><a href="#" onclick="event.stopPropagation()">View <span class="arrow">↗</span></a></td>
+                <td class="year">2025</td>
+            </tr>
+            <tr class="project-details">
+                <td colspan="5" class="project-details-td">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                          A weekly game for The New Yorker based on 100 years of cartoon history. Watch Jesse Eisenberg on instagram explain how to play.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Changed this row to not be expanded by default -->
+            <tr class="project-row" onclick="toggleDetails(this)">
+                <td class="brand">The New Yorker</td>
+                <td class="project">
+                    <span class="project-title">App Play Tab</span>
+                    <span class="toggle-icon"></span>
+                </td>
+                <td class="role">Assoc. Design Director</td>
+                <td class="links"><a href="#" onclick="event.stopPropagation()">Download App <span class="arrow">↗</span></a></td>
+                <td class="year">2025</td>
+            </tr>
+            <tr class="project-details">
+                <td colspan="5" class="project-details-td">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            A dedicated place for play in The New Yorker iOS app. We designed a new tab to feature crosswords, cartoons, puzzles, games, and more.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Mobile app home screen">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Article reading view">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Navigation menu">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Saved articles screen">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="project-row" onclick="toggleDetails(this)">
+                <td class="brand">The New Yorker</td>
+                <td class="project">
+                    <span class="project-title">100 Years of The New Yorker</span>
+                    <span class="toggle-icon"></span>
+                </td>
+                <td class="role">Assoc. Design Director</td>
+                <td class="links"><a href="#" onclick="event.stopPropagation()">Download App <span class="arrow">↗</span></a></td>
+                <td class="year">2025</td>
+            </tr>
+            <tr class="project-details">
+                <td colspan="5" class="project-details-td">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            A landing page to celebrate The New Yorker Magazine turning 100 years old. Includes magazine issues, the origin story, events, new merch and will evolve throughout the year.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Mobile app home screen">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Article reading view">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Navigation menu">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Saved articles screen">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr class="project-row" onclick="toggleDetails(this)">
+                <td class="brand">Vogue</td>
+                <td class="project">
+                    <span class="project-title">Runway App</span>
+                    <span class="toggle-icon"></span>
+                </td>
+                <td class="role">Product Design Lead</td>
+                <td class="links"><a href="#" onclick="event.stopPropagation()">Download App <span class="arrow">↗</span></a></td>
+                <td class="year">2025</td>
+            </tr>
+            <tr class="project-details">
+                <td colspan="5" class="project-details-td">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            I spent four months with the Vogue team to help redesign the Runway app from the ground up. Focus areas included: the home feed, quizzes/voting, notifications, and commenting.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="project-row" onclick="toggleDetails(this)">
+                <td class="brand">The New Yorker</td>
+                <td class="project">
+                    <span class="project-title">In the Dark</span>
+                    <span class="toggle-icon"></span>
+                </td>
+                <td class="role">Product Design Lead</td>
+                <td class="links"><a href="#" onclick="event.stopPropagation()">View <span class="arrow">↗</span></a></td>
+                <td class="year">2024</td>
+            </tr>
+            <tr class="project-details">
+                <td colspan="5" class="project-details-td">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            Design direction for an interactive data table on an investigative piece about American war crimes committed in Iraq and Afghanistan. 
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="project-row" onclick="toggleDetails(this)">
+                <td class="brand">Condé Nast</td>
+                <td class="project">
+                    <span class="project-title">Native Subscription Checkout</span>
+                    <span class="toggle-icon"></span>
+                </td>
+                <td class="role">Product Design Lead</td>
+                <td class="links"><a href="#" onclick="event.stopPropagation()">View <span class="arrow">↗</span></a></td>
+                <td class="year">2024</td>
+            </tr>
+            <tr class="project-details">
+                <td colspan="5" class="project-details-td">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            An immersive digital experience that blends cutting-edge technology with compelling storytelling. This project pushed the boundaries of web capabilities to create memorable user journeys that effectively communicated the client's message while engaging users in novel ways.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="project-row" onclick="toggleDetails(this)">
+                <td class="brand">The New Yorker</td>
+                <td class="project">
+                    <span class="project-title">Web Application</span>
+                    <span class="toggle-icon"></span>
+                </td>
+                <td class="role">Product Design Lead</td>
+                <td class="links"><a href="#" onclick="event.stopPropagation()">Download App <span class="arrow">↗</span></a></td>
+                <td class="year">2024</td>
+            </tr>
+            <tr class="project-details">
+                <td colspan="5" class="project-details-td">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            A sophisticated web application developed to streamline complex workflows and improve productivity. The design focused on creating an intuitive interface that simplified complicated tasks while maintaining robust functionality for power users.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="project-row" onclick="toggleDetails(this)">
+                <td class="brand">Juice</td>
+                <td class="project">
+                    <span class="project-title">Brand / Website</span>
+                    <span class="toggle-icon"></span>
+                </td>
+                <td class="role">Freelance Design</td>
+                <td class="links"><a href="#" onclick="event.stopPropagation()">View <span class="arrow">↗</span></a></td>
+                <td class="year">2023</td>
+            </tr>
+            <tr class="project-details">
+                <td colspan="5" class="project-details-td">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            Brand and web design for an ecommerce startup building an AR app for fashion brands. I designed the wordmark, brand identity, and website (no longer active).
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="project-row" onclick="toggleDetails(this)">
+                <td class="brand">The New Yorker</td>
+                <td class="project">
+                    <span class="project-title">App Audio Tab</span>
+                    <span class="toggle-icon"></span>
+                </td>
+                <td class="role">Product Design Lead</td>
+                <td class="links"><a href="#" onclick="event.stopPropagation()">Read Announcement <span class="arrow">↗</span></a></td>
+                <td class="year">2023</td>
+            </tr>
+            <tr class="project-details">
+                <td colspan="5" class="project-details-td">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            A new home for audio in The New Yorker iOS app. This feature gathers narrated articles and podcasts in one place, making it easy to listen whether you’re at home or on the go.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="/api/placeholder/500/280" alt="Project thumbnail">
+                            </div>
+                        </div>
+                    </div>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
