@@ -1,29 +1,38 @@
+@font-face {
+    font-family: 'Fragment Mono';
+    src: url('fonts/FragmentMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Fragment Mono', system-ui, -apple-system, Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: 1.2;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
     margin-bottom: 1.5rem;
     color: #e0e0e0;
 }
 
 h2 {
     font-size: 1.8rem;
-    font-weight: 500;
     line-height: 1.3;
     margin-bottom: 1rem;
     color: #e0e0e0;
 }
 
 p {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 14px;
+    line-height: 20px;
     margin-bottom: 1rem;
     color: #bbb;
 }
@@ -45,16 +54,11 @@ header {
 }
 
 .name {
-    font-size: 3rem;
-    font-weight: 400;
     margin-bottom: 0.5rem;
     line-height: 1;
 }
 
 .bio {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    opacity: 0.85;
     max-width: 90%;
 }
 
@@ -84,19 +88,15 @@ header {
 }
 
 .table-header {
-    border-bottom: 1px solid #333;
     padding-bottom: 0.5rem;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: #777;
-    letter-spacing: 1px;
 }
 
 .table-header th {
     text-align: left;
+    padding: 12px 0;
     font-weight: normal;
-    padding: 0.5rem 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    color: #5e5e5e;
 }
 
 .table-header th.year-header {
@@ -104,7 +104,7 @@ header {
 }
 
 .project-row {
-    border-bottom: 1px solid #222;
+    border-top: 1px solid #222;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
@@ -120,16 +120,15 @@ header {
 }
 
 .project-row td {
-    padding: 8px 0;
+    padding: 12px 0;
     vertical-align: middle;
 }
 
 .meta-text {
-    font-size: 0.9rem;
+    font-size: 14px;
+    line-height: 16px;
     text-transform: uppercase;
-    letter-spacing: .5px;
     color: #999;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 .brand {
@@ -138,32 +137,30 @@ header {
 
 .project {
     width: 60%;
-    font-size: 1.4rem;
     display: block;
 }
 
 .project-title {
-    margin-right: 10px;
+    color: #e0e0e0;
 }
 
 .toggle-icon {
     display: inline-block;
-    width: 16px;
-    height: 16px;
     position: relative;
     transition: transform 0.3s ease;
-    font-size: 16px;
+    font-family: 'Fragment Mono', Courier, monospace;
+    font-size: 14px;
     line-height: 1;
     text-align: center;
     color: #999;
 }
 
 .toggle-icon::before {
-    content: '[+]';
+    content: '+';
 }
 
 .project-row.expanded .toggle-icon::before {
-    content: '[–]';
+    content: '–';
 }
 
 .role {
@@ -179,14 +176,14 @@ header {
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    font-size: 0.9rem;
+    font-size: 13px;
+    line-height: 16px;
     text-transform: uppercase;
-    letter-spacing: .5px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Fragment Mono', Courier, monospace;
 }
 
 .links a:hover {
-    text-decoration: underline;
+    border-bottom: 1px dotted #e0e0e0;
 }
 
 .arrow {
@@ -210,7 +207,8 @@ header {
 }
 
 .project-details-content {
-    padding: 0 0 2rem 0;
+    padding: 0 0 24px 0;
+    max-width: 60%;
 }
 
 .project-details-td {
@@ -218,19 +216,18 @@ header {
 }
 
 .project-description {
-    padding: 0 0 1.5rem 15%;
-    line-height: 1.6;
-    font-size: 0.95rem;
-    max-width: 900px;
+    padding: 0 0 0 18px;
+    line-height: 1.5;
+    max-width: 50%;
     color: #bbb;
-    margin: 1rem 0;
+    margin: 4px 0 24px 0;
 }
 
 .project-thumbnails {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    padding: 0 0 0 15%;
+    padding: 0 0 0 18px;
 }
 
 .project-thumbnail {
@@ -316,5 +313,9 @@ header {
 
     .project-details-td {
         grid-column: 1 / -1;
+    }
+
+    .project-details-content {
+        max-width: 100%;
     }
 }
