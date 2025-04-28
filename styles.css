@@ -104,7 +104,7 @@ header {
 }
 
 .project-row {
-    border-top: 1px solid #222;
+    border-top: 1px solid #272727;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
@@ -240,7 +240,7 @@ header {
 
 .project-thumbnail img {
     width: 100%;
-    maxheight: 40px;
+    max-height: 40px;
 }
 
 footer {
@@ -260,6 +260,14 @@ footer {
         margin-bottom: 1rem;
     }
 
+    h1 {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
     .date {
         text-align: left;
         margin-top: 1rem;
@@ -273,38 +281,72 @@ footer {
         display: block;
     }
 
+    .projects-table {
+        margin-top: 30vh;
+    }
+
+    .meta-text {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .toggle-icon {
+        margin-right: 10px;
+    }
+
     .table-header {
         display: none;
     }
 
     .project-row {
-        padding: 1.5rem 0;
+        padding: 4px 0;
         display: grid;
         grid-template-areas:
-            "brand year"
-            "project project"
-            "role role"
-            "links links";
-        grid-template-columns: 1fr auto;
+            "project year";
+        grid-template-columns: auto 44px;
+        align-items: center;
     }
 
     .project-row td {
-        display: block;
-        padding: 0.3rem 0;
+        padding: 4px 0;
+        vertical-align: middle;
+    }
+
+    .project { 
+        grid-area: project; 
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .year { 
+        grid-area: year; 
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
     }
 
     .project-details-td {
         padding: 0;
     }
 
-    .brand { grid-area: brand; }
-    .project { grid-area: project; width: 100%; }
-    .role { grid-area: role; width: 100%; }
-    .links { grid-area: links; width: 100%; }
-    .year { grid-area: year; width: auto; }
+    .brand, .role, .links { 
+        display: none !important; 
+    }
+
+    .project-title {
+        font-size: 12px;
+    }
+
+    .year {
+        font-size: 12px;
+    }
 
     .project-description {
         padding-left: 0;
+        font-size: 12px;
+        max-width: 100%;
     }
 
     .project-thumbnails {

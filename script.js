@@ -3,7 +3,7 @@ function toggleDetails(row) {
     row.classList.toggle('expanded');
 }
 
-// Make sure our expanded row shows properly on page load
+// Make sure expanded row shows properly on page load
 document.addEventListener('DOMContentLoaded', function() {
     var expandedRows = document.querySelectorAll('.project-row.expanded');
     expandedRows.forEach(function(row) {
