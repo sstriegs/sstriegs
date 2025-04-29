@@ -37,6 +37,20 @@ p {
     color: #bbb;
 }
 
+a {
+    color: #e0e0e0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover {
+    animation: blink 0.4s infinite;
+    border-bottom: 1px dotted #e0e0e0;
+}
+
 body {
     background-color: #121212;
     color: #e0e0e0;
@@ -226,21 +240,21 @@ header {
 }
 
 .project-thumbnails {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
     gap: 1rem;
     padding: 0 0 0 18px;
 }
 
 .project-thumbnail {
-    aspect-ratio: 16/9;
     background-color: #2a2a2a;
+    height: 160px;
     overflow: hidden;
 }
 
 .project-thumbnail img {
-    width: 100%;
-    max-height: 40px;
+    height: 160px;
+    width: auto;
+    object-fit: contain;
 }
 
 footer {
