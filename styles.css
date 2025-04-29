@@ -146,11 +146,11 @@ header {
 }
 
 .brand {
-    width: 15%;
+    width: 20%;
 }
 
 .project {
-    width: 60%;
+    width: 50%;
     display: block;
 }
 
@@ -252,6 +252,12 @@ header {
 }
 
 .project-thumbnail img {
+    height: 160px;
+    width: auto;
+    object-fit: contain;
+}
+
+.project-thumbnail video {
     height: 160px;
     width: auto;
     object-fit: contain;
