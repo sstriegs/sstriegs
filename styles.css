@@ -1,6 +1,7 @@
 @font-face {
-    font-family: 'Fragment Mono';
-    src: url('fonts/FragmentMono-Regular.woff2') format('woff2');
+    font-family: 'Suisse Intl Mono';
+    src: url('fonts/SuisseIntlMono-Regular-WebS.woff2') format('woff2'),
+         url('fonts/SuisseIntlMono-Regular-WebS.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -10,14 +11,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Fragment Mono', system-ui, -apple-system, Roboto, sans-serif;
+    font-family: 'Suisse Intl Mono', system-ui, -apple-system, Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
+    line-height: 16px;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
     color: #e0e0e0;
@@ -32,8 +34,9 @@ h2 {
 
 p {
     font-size: 14px;
-    line-height: 20px;
-    color: #bbb;
+    line-height: 18px;
+    color: #959595;
+    letter-spacing: -0.5px;
 }
 
 a {
@@ -51,7 +54,7 @@ a:hover {
 }
 
 body {
-    background-color: #121212;
+    background-color: #050505;
     color: #e0e0e0;
     padding: 1.5em 1em;
 }
@@ -112,6 +115,10 @@ header {
     color: #5e5e5e;
 }
 
+.project-header {
+    margin-left: 10px;
+}
+
 .table-header th.year-header {
     text-align: right;
 }
@@ -129,7 +136,7 @@ header {
 }
 
 .project-row:hover {
-    background-color: #1a1a1a;
+    background-color: #131313;
 }
 
 .project-row td {
@@ -138,7 +145,7 @@ header {
 }
 
 .meta-text {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 16px;
     text-transform: uppercase;
     color: #999;
@@ -149,7 +156,7 @@ header {
 }
 
 .project {
-    width: 50%;
+    width: 60%;
     display: block;
 }
 
@@ -161,7 +168,7 @@ header {
     display: inline-block;
     position: relative;
     transition: transform 0.3s ease;
-    font-family: 'Fragment Mono', Courier, monospace;
+    font-family: 'Suisse Intl Mono', Courier, monospace;
     font-size: 14px;
     line-height: 1;
     text-align: center;
@@ -192,7 +199,7 @@ header {
     font-size: 13px;
     line-height: 16px;
     text-transform: uppercase;
-    font-family: 'Fragment Mono', Courier, monospace;
+    font-family: 'Suisse Intl Mono', Courier, monospace;
     transition: opacity 0.2s ease;
 }
 
@@ -232,9 +239,7 @@ header {
 
 .project-description {
     padding: 0 0 0 18px;
-    line-height: 1.5;
     max-width: 50%;
-    color: #bbb;
     margin: 4px 0 24px 0;
 }
 
