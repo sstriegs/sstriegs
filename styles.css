@@ -389,3 +389,98 @@ footer {
         max-width: 100%;
     }
 }
+
+/* Lightbox styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.lightbox-content img,
+.lightbox-content video {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 1001;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-close:hover {
+    opacity: 1;
+    animation: blink 0.4s infinite;
+}
+
+.lightbox-arrow {
+    position: static;
+    cursor: pointer;
+    z-index: 1001;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-arrow:hover {
+    opacity: 1;
+    animation: blink 0.4s infinite;
+}
+
+.lightbox-navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lightbox-prev {
+    order: 2;
+}
+
+.lightbox-next {
+    order: 3;
+}
+
+.lightbox-counter {
+    order: 1;
+    margin-right: 10px;
+}
+
+.project-thumbnail {
+    cursor: pointer;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
