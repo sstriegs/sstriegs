@@ -25,6 +25,37 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentProject = null;
     let currentIndex = 0;
     let mediaItems = [];
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    // Handle touch events for swipe
+    function handleTouchStart(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    }
+
+    function handleTouchEnd(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50; // minimum distance for swipe
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                // Swipe right - go to previous
+                prevMedia();
+            } else {
+                // Swipe left - go to next
+                nextMedia();
+            }
+        }
+    }
+
+    // Add touch event listeners
+    lightboxContent.addEventListener('touchstart', handleTouchStart, false);
+    lightboxContent.addEventListener('touchend', handleTouchEnd, false);
 
     // Format number with leading zero
     function formatNumber(num) {

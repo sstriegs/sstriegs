@@ -266,6 +266,15 @@ footer {
 }
 
 @media (max-width: 768px) {
+    /* Disable hover effects on mobile */
+    a:hover,
+    .lightbox-arrow:hover,
+    .lightbox-close:hover,
+    .project-row:hover {
+        animation: none !important;
+        border-bottom: none !important;
+    }
+
     header {
         flex-direction: column;
     }
@@ -276,33 +285,29 @@ footer {
     }
 
     h1 {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     p {
-        font-size: 12px;
-    }
-
-    .date {
-        text-align: left;
-        margin-top: 1rem;
+        font-size: 13px;
     }
 
     .gallery {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .projects-table, .projects-table tbody {
+    .projects-table {
+        margin-top: 30vh;
         display: block;
     }
 
-    .projects-table {
-        margin-top: 30vh;
+    .projects-table tbody {
+        display: block;
     }
 
     .meta-text {
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 13px;
+        line-height: 16px;
     }
 
     .toggle-icon {
@@ -314,10 +319,9 @@ footer {
     }
 
     .project-row {
-        padding: 4px 0;
+        padding: 6px 0;
         display: grid;
-        grid-template-areas:
-            "project year";
+        grid-template-areas: "project year";
         grid-template-columns: auto 44px;
         align-items: center;
     }
@@ -342,25 +346,12 @@ footer {
         justify-content: flex-end;
     }
 
-    .project-details-td {
-        padding: 0;
-    }
-
     .brand, .role, .links { 
         display: none !important; 
     }
 
-    .project-title {
-        font-size: 12px;
-    }
-
-    .year {
-        font-size: 12px;
-    }
-
     .project-description {
         padding-left: 0;
-        font-size: 12px;
         max-width: 100%;
     }
 
@@ -383,10 +374,23 @@ footer {
 
     .project-details-td {
         grid-column: 1 / -1;
+        padding: 0;
     }
 
     .project-details-content {
         max-width: 100%;
+    }
+
+    .lightbox-arrow {
+        opacity: 1 !important;
+    }
+
+    .lightbox-counter {
+        opacity: .7;
+    }
+
+    .lightbox-close {
+        opacity: 1 !important;
     }
 }
 
