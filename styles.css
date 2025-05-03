@@ -33,7 +33,6 @@ h2 {
 p {
     font-size: 14px;
     line-height: 20px;
-    margin-bottom: 1rem;
     color: #bbb;
 }
 
@@ -54,7 +53,7 @@ a:hover {
 body {
     background-color: #121212;
     color: #e0e0e0;
-    padding: 32px 24px 8px 24px;
+    padding: 1.5em 1em;
 }
 
 header {
@@ -269,8 +268,7 @@ footer {
     /* Disable hover effects on mobile */
     a:hover,
     .lightbox-arrow:hover,
-    .lightbox-close:hover,
-    .project-row:hover {
+    .lightbox-close:hover {
         animation: none !important;
         border-bottom: none !important;
     }
@@ -324,6 +322,7 @@ footer {
         grid-template-areas: "project year";
         grid-template-columns: auto 44px;
         align-items: center;
+        background-color: transparent !important;
     }
 
     .project-row td {
@@ -407,7 +406,8 @@ footer {
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 16px;
     text-transform: uppercase;
 }
 
