@@ -47,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
         mediaItems = Array.from(projectDetails.querySelectorAll('.project-thumbnail img, .project-thumbnail video'));
         currentIndex = mediaItems.indexOf(mediaElement);
         
+        // Set the project title
+        const title = projectRow.querySelector('.project-title').textContent;
+        document.querySelector('.lightbox-title').textContent = title;
+        
         updateLightboxContent();
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -77,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentProject = null;
         currentIndex = 0;
         mediaItems = [];
+        document.querySelector('.lightbox-title').textContent = '';
     }
 
     // Navigate to previous media

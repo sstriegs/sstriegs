@@ -115,10 +115,6 @@ header {
     color: #5e5e5e;
 }
 
-.project-header {
-    margin-left: 10px;
-}
-
 .table-header th.year-header {
     text-align: right;
 }
@@ -468,20 +464,30 @@ footer {
     left: 20px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
+}
+
+.lightbox-title {
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #959595;
+    margin-right: 10px;
 }
 
 .lightbox-prev {
     order: 2;
+    padding: 5px;
 }
 
 .lightbox-next {
     order: 3;
+    padding: 5px;
 }
 
 .lightbox-counter {
     order: 1;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .project-thumbnail {
