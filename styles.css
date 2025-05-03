@@ -272,6 +272,12 @@ header {
     object-fit: contain;
 }
 
+/* Increase contrast for real-time dashboard images */
+.project-thumbnail img[src*="real-time-dashboard"],
+.lightbox-content img[src*="real-time-dashboard"] {
+    filter: contrast(1.2);
+}
+
 footer {
     margin-top: 80px;
     border-top: 1px solid #222;
