@@ -78,6 +78,16 @@ header {
 .time-location {
     grid-column: 9 / 13;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.time-location p {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: block;
 }
 
 p.time {
