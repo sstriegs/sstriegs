@@ -56,16 +56,11 @@ a:hover {
 body {
     background-color: #050505;
     color: #e0e0e0;
-    padding: 1.5em 1em;
+    padding: 1.2em 1em;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 3rem;
-}
-
-.name-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
@@ -78,6 +73,29 @@ header {
 
 .bio {
     grid-column: 5 / 9;
+}
+
+.time-location {
+    grid-column: 9 / 13;
+    text-align: right;
+}
+
+p.time {
+    font-size: 13px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+p.location {
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+p.weather {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #5e5e5e;
 }
 
 .gallery {

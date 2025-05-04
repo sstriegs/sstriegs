@@ -134,3 +134,56 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+// Get day suffix (st, nd, rd, th)
+function getDaySuffix(day) {
+    if (day > 3 && day < 21) return 'th';
+    switch (day % 10) {
+        case 1: return 'st';
+        case 2: return 'nd';
+        case 3: return 'rd';
+        default: return 'th';
+    }
+}
+
+// Get weather data
+async function updateWeather() {
+    const weatherElement = document.querySelector('.weather');
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Brooklyn,US&units=imperial&appid=${config.OPENWEATHER_API_KEY}`);
+        const data = await response.json();
+        const temp = Math.round(data.main.temp);
+        const description = data.weather[0].description;
+        weatherElement.textContent = `${temp}°F, ${description}`;
+    } catch (error) {
+        console.error('Error fetching weather:', error);
+        weatherElement.textContent = '';
+    }
+}
+
+// Update time display
+function updateTime() {
+    const timeElement = document.querySelector('.time');
+    const now = new Date();
+    const day = now.getDate();
+    const dateOptions = {
+        month: 'short',
+        day: 'numeric'
+    };
+    const timeOptions = { 
+        hour: 'numeric', 
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+        timeZone: 'America/New_York'
+    };
+    const date = now.toLocaleDateString('en-US', dateOptions).replace(/\d+/, day + getDaySuffix(day));
+    const time = now.toLocaleTimeString('en-US', timeOptions);
+    timeElement.textContent = `${date}, ${time}`;
+}
+
+// Update time and weather immediately and then every minute
+updateTime();
+updateWeather();
+setInterval(updateTime, 1000);
+setInterval(updateWeather, 300000); // Update weather every 5 minutes
