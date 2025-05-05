@@ -1,6 +1,39 @@
 // Project details toggle functionality
 function toggleDetails(row) {
     row.classList.toggle('expanded');
+    const detailsRow = row.nextElementSibling;
+    if (detailsRow && detailsRow.classList.contains('project-details')) {
+        detailsRow.classList.toggle('show');
+    }
+}
+
+// Toggle all project rows
+function toggleAll() {
+    const button = document.querySelector('.control-button');
+    const allRows = document.querySelectorAll('.project-row');
+    const allExpanded = Array.from(allRows).every(row => row.classList.contains('expanded'));
+    
+    if (allExpanded) {
+        // Collapse all
+        allRows.forEach(row => {
+            row.classList.remove('expanded');
+            const detailsRow = row.nextElementSibling;
+            if (detailsRow && detailsRow.classList.contains('project-details')) {
+                detailsRow.classList.remove('show');
+            }
+        });
+        button.textContent = '[ Expand All ]';
+    } else {
+        // Expand all
+        allRows.forEach(row => {
+            row.classList.add('expanded');
+            const detailsRow = row.nextElementSibling;
+            if (detailsRow && detailsRow.classList.contains('project-details')) {
+                detailsRow.classList.add('show');
+            }
+        });
+        button.textContent = '[ Collapse All ]';
+    }
 }
 
 // Make sure expanded row shows properly on page load
@@ -10,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     expandedRows.forEach(function(row) {
         var detailsRow = row.nextElementSibling;
         if (detailsRow && detailsRow.classList.contains('project-details')) {
-            detailsRow.style.display = 'table-row';
+            detailsRow.classList.add('show');
         }
     });
 
