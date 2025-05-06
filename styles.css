@@ -75,7 +75,6 @@ header {
 .contact {
     grid-column: 9 / 11;
     text-transform: uppercase;
-    margin-bottom: 12px;
 }
 
 .time-location {
@@ -251,7 +250,7 @@ header {
 
 .project-description {
     padding: 0 0 0 16px;
-    max-width: 30%;
+    max-width: 420px;
     margin: 4px 0 24px 0;
 }
 
@@ -347,13 +346,17 @@ footer {
     }
 
     .bio {
-        margin-bottom: 16px;
+        margin-bottom: 12px;
     }
     
     .contact {
         display: flex;
         flex-direction: row;
         gap: 1rem;
+    }
+
+    .contact a {
+        padding: 4px 4px 4px 0px;
     }
 
     .time-location {
