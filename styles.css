@@ -71,13 +71,19 @@ header {
 }
 
 .bio {
-    grid-column: 4 / 8;
+    grid-column: 4 / 7;
+}
+
+.contact {
+    grid-column: 9 / 11;
+    text-transform: uppercase;
 }
 
 .time-location {
     grid-column: 11 / 13;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
 
 .time-location p {
@@ -85,22 +91,8 @@ header {
     padding: 0;
     width: auto;
     display: block;
-}
-
-p.time {
     font-size: 13px;
     text-transform: uppercase;
-}
-
-p.location {
-    font-size: 13px;
-    text-transform: uppercase;
-}
-
-p.weather {
-    font-size: 13px;
-    text-transform: uppercase;
-    color: #5e5e5e;
 }
 
 .projects-section {
