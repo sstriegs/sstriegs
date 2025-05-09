@@ -571,3 +571,19 @@ footer {
     50% { opacity: 0.5; }
     100% { opacity: 1; }
 }
+
+.error-section {
+    margin-top: 40vh;
+}
+
+.error-section p {
+    color: #959595;
+    text-transform: uppercase;
+}
+
+.error-section a {
+    color: #e0e0e0;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    margin-top: 1rem;
+}
