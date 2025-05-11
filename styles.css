@@ -373,6 +373,10 @@ footer {
         margin-bottom: 8px;
     }
 
+    .table-controls {
+        text-align: right;
+    }
+
     .projects-section {
         margin-top: 40vh;
     }

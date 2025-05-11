@@ -7,33 +7,28 @@ function toggleDetails(row) {
     }
 }
 
-// Toggle all project rows
-function toggleAll() {
-    const button = document.querySelector('.control-button');
+// Expand all project rows
+function expandAll() {
     const allRows = document.querySelectorAll('.project-row');
-    const allExpanded = Array.from(allRows).every(row => row.classList.contains('expanded'));
-    
-    if (allExpanded) {
-        // Collapse all
-        allRows.forEach(row => {
-            row.classList.remove('expanded');
-            const detailsRow = row.nextElementSibling;
-            if (detailsRow && detailsRow.classList.contains('project-details')) {
-                detailsRow.classList.remove('show');
-            }
-        });
-        button.textContent = '[Expand All]';
-    } else {
-        // Expand all
-        allRows.forEach(row => {
-            row.classList.add('expanded');
-            const detailsRow = row.nextElementSibling;
-            if (detailsRow && detailsRow.classList.contains('project-details')) {
-                detailsRow.classList.add('show');
-            }
-        });
-        button.textContent = '[ Collapse All ]';
-    }
+    allRows.forEach(row => {
+        row.classList.add('expanded');
+        const detailsRow = row.nextElementSibling;
+        if (detailsRow && detailsRow.classList.contains('project-details')) {
+            detailsRow.classList.add('show');
+        }
+    });
+}
+
+// Collapse all project rows
+function collapseAll() {
+    const allRows = document.querySelectorAll('.project-row');
+    allRows.forEach(row => {
+        row.classList.remove('expanded');
+        const detailsRow = row.nextElementSibling;
+        if (detailsRow && detailsRow.classList.contains('project-details')) {
+            detailsRow.classList.remove('show');
+        }
+    });
 }
 
 // Make sure expanded row shows properly on page load
