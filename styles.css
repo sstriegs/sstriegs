@@ -278,6 +278,10 @@ header {
     object-fit: contain;
 }
 
+.project-thumbnail:hover {
+    cursor: zoom-in;
+}
+
 /* Increase contrast for real-time dashboard images */
 .project-thumbnail img[src*="real-time-dashboard"],
 .lightbox-content img[src*="real-time-dashboard"] {
@@ -301,6 +305,7 @@ footer {
 
 .copyright {
     grid-column: 11 / 13;
+    text-align: right;
 }
 
 .colophon {
@@ -455,6 +460,10 @@ footer {
 
     .project-details-content {
         max-width: 100%;
+    }
+
+    .copyright {
+        text-align: left;
     }
 
     .lightbox-arrow {
