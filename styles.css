@@ -58,7 +58,7 @@ body {
 }
 
 header {
-    margin-bottom: 3rem;
+    margin-bottom: 16px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
@@ -143,6 +143,7 @@ header {
 
 .project-row:hover {
     background-color: #131313;
+    cursor: crosshair;
 }
 
 .project-row td {
