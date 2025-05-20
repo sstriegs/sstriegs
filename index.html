@@ -39,356 +39,333 @@
             <button onclick="expandAll()" class="control-button">[Open All]</button>
             <button onclick="collapseAll()" class="control-button">[Close All]</button>
         </div>
-        <table class="projects-table">
-            <thead>
-                <tr class="table-header">
-                    <th class="meta-text">Project</th>
-                    <th class="meta-text">Brand</th>
-                    <th class="meta-text">Role</th>
-                    <th class="meta-text">Links</th>
-                    <th class="year-header meta-text">Year</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="project-row" onclick="toggleDetails(this)">
-                    <td class="project">
+        <div class="projects-grid">
+            <div class="grid-header">
+                <div class="meta-text">Project</div>
+                <div class="meta-text">Brand</div>
+                <div class="meta-text">Role</div>
+                <div class="meta-text">Links</div>
+                <div class="year-header meta-text">Year</div>
+            </div>
+            <div class="grid-body">
+                <div class="project-row" onclick="toggleDetails(this)">
+                    <div class="project">
                         <span class="toggle-icon"></span>
                         <span class="project-title meta-text">Laugh Lines</span>
-                    </td>
-                    <td class="brand meta-text">The New Yorker</td>
-                    <td class="role meta-text">Assoc. Design Director</td>
-                    <td class="links"><a href="https://www.newyorker.com/laugh-lines" target="_blank" onclick="event.stopPropagation()">Play <span class="arrow">↗</span></a></td>
-                    <td class="year meta-text">2025</td>
-                </tr>
-                <tr class="project-details">
-                    <td colspan="5" class="project-details-td">
-                        <div class="project-details-content">
-                            <p class="project-description">
-                              A weekly game for The New Yorker based on 100 years of cartoon history. <a href="https://instagram.com/p/DFVmipCs0YT/" target="_blank">Watch Jesse Eisenberg explain how to play on instagram</a>.
-                            </p>
-                            <div class="project-thumbnails">
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline preload="none">
-                                        <source src="images/laugh-lines/laughlines-logo-animation-compressed.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="project-thumbnail">
-                                    <img src="images/laugh-lines/laughlines-landing.png" alt="Laugh Lines landing page" loading="lazy">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline preload="none">
-                                        <source src="images/laugh-lines/laughlines-interaction-compressed.mp4" type="video/mp4">
-                                    </video>
-                                </div>
+                    </div>
+                    <div class="brand meta-text">The New Yorker</div>
+                    <div class="role meta-text">Assoc. Design Director</div>
+                    <div class="links"><a href="https://www.newyorker.com/laugh-lines" target="_blank" onclick="event.stopPropagation()">Play <span class="arrow">↗</span></a></div>
+                    <div class="year meta-text">2025</div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                          A weekly game for The New Yorker based on 100 years of cartoon history. <a href="https://instagram.com/p/DFVmipCs0YT/" target="_blank">Watch Jesse Eisenberg explain how to play on instagram</a>.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline preload="none">
+                                    <source src="images/laugh-lines/laughlines-logo-animation-compressed.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="images/laugh-lines/laughlines-landing.png" alt="Laugh Lines landing page" loading="lazy">
+                            </div>
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline preload="none">
+                                    <source src="images/laugh-lines/laughlines-interaction-compressed.mp4" type="video/mp4">
+                                </video>
                             </div>
                         </div>
-                    </td>
-                </tr>
+                    </div>
+                </div>
     
-                <tr class="project-row" onclick="toggleDetails(this)">
-                    <td class="project">
+                <div class="project-row" onclick="toggleDetails(this)">
+                    <div class="project">
                         <span class="toggle-icon"></span>
                         <span class="project-title meta-text">100 Years</span>
-                    </td>
-                    <td class="brand meta-text">The New Yorker</td>
-                    <td class="role meta-text">Assoc. Design Director</td>
-                    <td class="links"><a href="https://www.newyorker.com/100" target="_blank" onclick="event.stopPropagation()">View <span class="arrow">↗</span></a></td>
-                    <td class="year meta-text">2025</td>
-                </tr>
-                <tr class="project-details">
-                    <td colspan="5" class="project-details-td">
-                        <div class="project-details-content">
-                            <p class="project-description">
-                                A landing page to celebrate The New Yorker Magazine turning 100 years old. Includes magazine issues, the origin story, events, new merch and will evolve throughout the year.
-                            </p>
-                            <div class="project-thumbnails">
-                                <div class="project-thumbnail">
-                                    <img src="images/100-years/anniversary-landing-night-mobile.png" alt="Illustration of the city skyline at night with the New Yorker logo" loading="lazy">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <img src="images/100-years/anniversary-landing-light-mobile.png" alt="Illustration of the city skyline with the New Yorker logo" loading="lazy">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline preload="none">
-                                        <source src="images/100-years/anniversary-illos-loop.mp4" type="video/mp4">
-                                    </video>
-                                </div>
+                    </div>
+                    <div class="brand meta-text">The New Yorker</div>
+                    <div class="role meta-text">Assoc. Design Director</div>
+                    <div class="links"><a href="https://www.newyorker.com/100" target="_blank" onclick="event.stopPropagation()">View <span class="arrow">↗</span></a></div>
+                    <div class="year meta-text">2025</div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            A landing page to celebrate The New Yorker Magazine turning 100 years old. Includes magazine issues, the origin story, events, new merch and will evolve throughout the year.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="images/100-years/anniversary-landing-night-mobile.png" alt="Illustration of the city skyline at night with the New Yorker logo" loading="lazy">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="images/100-years/anniversary-landing-light-mobile.png" alt="Illustration of the city skyline with the New Yorker logo" loading="lazy">
+                            </div>
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline preload="none">
+                                    <source src="images/100-years/anniversary-illos-loop.mp4" type="video/mp4">
+                                </video>
                             </div>
                         </div>
-                    </td>
-                </tr>
+                    </div>
+                </div>
     
-                <tr class="project-row" onclick="toggleDetails(this)">
-                    <td class="project">
+                <div class="project-row" onclick="toggleDetails(this)">
+                    <div class="project">
                         <span class="toggle-icon"></span>
                         <span class="project-title meta-text">App Play Tab</span>
-                    </td>
-                    <td class="brand meta-text">The New Yorker</td>
-                    <td class="role meta-text">Assoc. Design Director</td>
-                    <td class="links"><a href="https://apps.apple.com/us/app/the-new-yorker/id1234567890" target="_blank" onclick="event.stopPropagation()">Download app <span class="arrow">↗</span></a></td>
-                    <td class="year meta-text">2024</td>
-                </tr>
-                <tr class="project-details">
-                    <td colspan="5" class="project-details-td">
-                        <div class="project-details-content">
-                            <p class="project-description">
-                                A dedicated place for play in The New Yorker iOS app. We designed a new tab to feature crosswords, cartoons, puzzles, games, and more.
-                            </p>
-                            <div class="project-thumbnails">
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/app-play-tab/TNY_App_Playtab.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/app-play-tab/cartoons-carousel.mp4" type="video/mp4">
-                                    </video>
-                                </div>
+                    </div>
+                    <div class="brand meta-text">The New Yorker</div>
+                    <div class="role meta-text">Assoc. Design Director</div>
+                    <div class="links"><a href="https://apps.apple.com/us/app/the-new-yorker/id1234567890" target="_blank" onclick="event.stopPropagation()">Download app <span class="arrow">↗</span></a></div>
+                    <div class="year meta-text">2024</div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            A dedicated place for play in The New Yorker iOS app. We designed a new tab to feature crosswords, cartoons, puzzles, games, and more.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline>
+                                    <source src="images/app-play-tab/TNY_App_Playtab.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline>
+                                    <source src="images/app-play-tab/cartoons-carousel.mp4" type="video/mp4">
+                                </video>
                             </div>
                         </div>
-                    </td>
-                </tr>
+                    </div>
+                </div>
     
-                <tr class="project-row" onclick="toggleDetails(this)">
-                    <td class="project">
+                <div class="project-row" onclick="toggleDetails(this)">
+                    <div class="project">
                         <span class="toggle-icon"></span>
                         <span class="project-title meta-text">Runway App</span>
-                    </td>
-                    <td class="brand meta-text">Vogue</td>
-                    <td class="role meta-text">Product Design Lead</td>
-                    <td class="links"><a href="https://apps.apple.com/us/app/vogue-runway/id1234567890" target="_blank" onclick="event.stopPropagation()">Download app <span class="arrow">↗</span></a></td>
-                    <td class="year meta-text">2024</td>
-                </tr>
-                <tr class="project-details">
-                    <td colspan="5" class="project-details-td">
-                        <div class="project-details-content">
-                            <p class="project-description">
-                                I spent four months with the Vogue team to help redesign the Runway app from the ground up. Focus areas included: the home feed, quizzes/voting, notifications, and commenting.
-                            </p>
-                            <div class="project-thumbnails">
-                                <div class="project-thumbnail">
+                    </div>
+                    <div class="brand meta-text">Vogue</div>
+                    <div class="role meta-text">Product Design Lead</div>
+                    <div class="links"><a href="https://apps.apple.com/us/app/vogue-runway/id1234567890" target="_blank" onclick="event.stopPropagation()">Download app <span class="arrow">↗</span></a></div>
+                    <div class="year meta-text">2024</div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            I spent four months with the Vogue team to help redesign the Runway app from the ground up. Focus areas included: the home feed, quizzes/voting, notifications, and commenting.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                            <video autoplay loop muted playsinline>
+                                <source src="images/vogue-runway/vogue-onboard.mp4" type="video/mp4">
+                            </video>
+                            </div>
+                            <div class="project-thumbnail">
                                 <video autoplay loop muted playsinline>
-                                    <source src="images/vogue-runway/vogue-onboard.mp4" type="video/mp4">
+                                    <source src="images/vogue-runway/vogue-world-spaces.mp4" type="video/mp4">
                                 </video>
                                 </div>
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/vogue-runway/vogue-world-spaces.mp4" type="video/mp4">
-                                    </video>
-                                    </div>
-                            </div>
                         </div>
-                    </td>
-                </tr>
+                    </div>
+                </div>
     
-                <tr class="project-row" onclick="toggleDetails(this)">
-                    <td class="project">
+                <div class="project-row" onclick="toggleDetails(this)">
+                    <div class="project">
                         <span class="toggle-icon"></span>
                         <span class="project-title meta-text">In The Dark</span>
-                    </td>
-                    <td class="brand meta-text">The New Yorker</td>
-                    <td class="role meta-text">Product Design Lead</td>
-                    <td class="links"><a href="https://www.newyorker.com/podcast/in-the-dark/the-war-crimes-that-the-military-buried" target="_blank" onclick="event.stopPropagation()">Read the story <span class="arrow">↗</span></a></td>
-                    <td class="year meta-text">2024</td>
-                </tr>
-                <tr class="project-details">
-                    <td colspan="5" class="project-details-td">
-                        <div class="project-details-content">
-                            <p class="project-description">
-                                Design direction for an interactive data table on an investigative piece about American war crimes committed in Iraq and Afghanistan.
-                            </p>
-                            <div class="project-thumbnails">
-                                <div class="project-thumbnail">
-                                    <img src="images/in-the-dark/in_the_dark-homepage.png" alt="Papers flying in the background with the In The Dark logo">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <img src="images/in-the-dark/war-crimes-data-table-nobk.png" alt="Data table on mobile with filters selected">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <img src="images/in-the-dark/war-crimes-expanded-nobkg.png" alt="Expanded row on mobile data table">
-                                </div>
+                    </div>
+                    <div class="brand meta-text">The New Yorker</div>
+                    <div class="role meta-text">Product Design Lead</div>
+                    <div class="links"><a href="https://www.newyorker.com/podcast/in-the-dark/the-war-crimes-that-the-military-buried" target="_blank" onclick="event.stopPropagation()">Read the story <span class="arrow">↗</span></a></div>
+                    <div class="year meta-text">2024</div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            Design direction for an interactive data table on an investigative piece about American war crimes committed in Iraq and Afghanistan.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="images/in-the-dark/in_the_dark-homepage.png" alt="Papers flying in the background with the In The Dark logo">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="images/in-the-dark/war-crimes-data-table-nobk.png" alt="Data table on mobile with filters selected">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="images/in-the-dark/war-crimes-expanded-nobkg.png" alt="Expanded row on mobile data table">
                             </div>
                         </div>
-                    </td>
-                </tr>
+                    </div>
+                </div>
     
-                <tr class="project-row" onclick="toggleDetails(this)">
-                    <td class="project">
+                <div class="project-row" onclick="toggleDetails(this)">
+                    <div class="project">
                         <span class="toggle-icon"></span>
                         <span class="project-title meta-text">JUICE: Brand</span>
-                    </td>
-                    <td class="brand meta-text">JUICE</td>
-                    <td class="role meta-text">Freelance Designer</td>
-                    <td class="links"></td>
-                    <td class="year meta-text">2023</td>
-                </tr>
-                <tr class="project-details">
-                    <td colspan="5" class="project-details-td">
-                        <div class="project-details-content">
-                            <p class="project-description">
-                                Brand and web design for an ecommerce startup building an AR app for fashion brands. I designed the wordmark, brand identity, and website (no longer active).
-                            </p>
-                            <div class="project-thumbnails">
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/juice/JUICE-loader.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/juice/JUICE-dress-logo.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/juice/JUICE-crt-hoodie.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/juice/JUICE-crt-puffy.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/juice/JUICE-3d-yellow.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/juice/JUICE-3d-blue.mp4" type="video/mp4">
-                                    </video>
-                                </div>
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/juice/JUICE-3d-logospin.mp4" type="video/mp4">
-                                    </video>
-                                </div>
+                    </div>
+                    <div class="brand meta-text">JUICE</div>
+                    <div class="role meta-text">Freelance Designer</div>
+                    <div class="links"></div>
+                    <div class="year meta-text">2023</div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            Brand and web design for an ecommerce startup building an AR app for fashion brands. I designed the wordmark, brand identity, and website (no longer active).
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline>
+                                    <source src="images/juice/JUICE-loader.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline>
+                                    <source src="images/juice/JUICE-dress-logo.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline>
+                                    <source src="images/juice/JUICE-crt-hoodie.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline>
+                                    <source src="images/juice/JUICE-crt-puffy.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline>
+                                    <source src="images/juice/JUICE-3d-yellow.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline>
+                                    <source src="images/juice/JUICE-3d-blue.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline>
+                                    <source src="images/juice/JUICE-3d-logospin.mp4" type="video/mp4">
+                                </video>
                             </div>
                         </div>
-                    </td>
-                </tr>
+                    </div>
+                </div>
     
-                <tr class="project-row" onclick="toggleDetails(this)">
-                    <td class="project">
+                <div class="project-row" onclick="toggleDetails(this)">
+                    <div class="project">
                         <span class="toggle-icon"></span>
                         <span class="project-title meta-text">App Audio Tab</span>
-                    </td>
-                    <td class="brand meta-text">The New Yorker</td>
-                    <td class="role meta-text">Product Design Lead</td>
-                    <td class="links"><a href="https://www.newyorker.com/news/news-desk/a-new-home-for-audio-in-the-new-yorker-app" target="_blank" onclick="event.stopPropagation()">Read announcement <span class="arrow">↗</span></a></td>
-                    <td class="year meta-text">2022</td>
-                </tr>
-                <tr class="project-details">
-                    <td colspan="5" class="project-details-td">
-                        <div class="project-details-content">
-                            <p class="project-description">
-                                A new home for audio in The New Yorker iOS app. This feature gathers narrated articles and podcasts in one place, making it easy to listen whether you're at home or on the go.
-                            </p>
-                            <div class="project-thumbnails">
-                                <div class="project-thumbnail">
-                                    <video autoplay loop muted playsinline>
-                                        <source src="images/app-audio-tab/audio-tab-compressed.mp4" type="video/mp4">
-                                    </video>
-                                </div>
+                    </div>
+                    <div class="brand meta-text">The New Yorker</div>
+                    <div class="role meta-text">Product Design Lead</div>
+                    <div class="links"><a href="https://www.newyorker.com/news/news-desk/a-new-home-for-audio-in-the-new-yorker-app" target="_blank" onclick="event.stopPropagation()">Read announcement <span class="arrow">↗</span></a></div>
+                    <div class="year meta-text">2022</div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            A new home for audio in The New Yorker iOS app. This feature gathers narrated articles and podcasts in one place, making it easy to listen whether you're at home or on the go.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <video autoplay loop muted playsinline>
+                                    <source src="images/app-audio-tab/audio-tab-compressed.mp4" type="video/mp4">
+                                </video>
                             </div>
                         </div>
-                    </td>
-                </tr>
+                    </div>
+                </div>
     
-                <tr class="project-row" onclick="toggleDetails(this)">
-                    <td class="project">
+                <div class="project-row" onclick="toggleDetails(this)">
+                    <div class="project">
                         <span class="toggle-icon"></span>
                         <span class="project-title meta-text">Android App</span>
-                    </td>
-                    <td class="brand meta-text">The New Yorker</td>
-                    <td class="role meta-text">Product Design Lead</td>
-                    <td class="links"><a href="https://www.newyorker.com/news/news-desk/the-new-yorker-app-is-now-available-on-android" target="_blank" onclick="event.stopPropagation()">Read announcement<span class="arrow">↗</span></a></td>
-                    <td class="year meta-text">2022</td>
-                </tr>
-                <tr class="project-details">
-                    <td colspan="5" class="project-details-td">
-                        <div class="project-details-content">
-                            <p class="project-description">
-                                Bringing The New Yorker to Android. My first project at The New Yorker was to expand our iOS design system for Android in order to launch a new app.
-                            </p>
-                            <div class="project-thumbnails">
-                                <div class="project-thumbnail">
-                                    <img src="images/android-app/tny-android-1.jpg" alt="The New Yorker Audio Tab">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <img src="images/android-app/tny-android-2.jpg" alt="The New Yorker Audio Tab">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <img src="images/android-app/tny-android-3.jpg" alt="The New Yorker Audio Tab">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <img src="images/android-app/tny-android-4.jpg" alt="The New Yorker Audio Tab">
-                                </div>
+                    </div>
+                    <div class="brand meta-text">The New Yorker</div>
+                    <div class="role meta-text">Product Design Lead</div>
+                    <div class="links"><a href="https://www.newyorker.com/news/news-desk/the-new-yorker-app-is-now-available-on-android" target="_blank" onclick="event.stopPropagation()">Read announcement<span class="arrow">↗</span></a></div>
+                    <div class="year meta-text">2022</div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            Bringing The New Yorker to Android. My first project at The New Yorker was to expand our iOS design system for Android in order to launch a new app.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="images/android-app/tny-android-1.jpg" alt="The New Yorker Audio Tab">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="images/android-app/tny-android-2.jpg" alt="The New Yorker Audio Tab">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="images/android-app/tny-android-3.jpg" alt="The New Yorker Audio Tab">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="images/android-app/tny-android-4.jpg" alt="The New Yorker Audio Tab">
                             </div>
                         </div>
-                    </td>
-                </tr>
+                    </div>
+                </div>
     
-                <tr class="project-row" onclick="toggleDetails(this)">
-                    <td class="project">
+                <div class="project-row" onclick="toggleDetails(this)">
+                    <div class="project">
                         <span class="toggle-icon"></span>
                         <span class="project-title meta-text">Real-Time Dashboard</span>
-                    </td>
-                    <td class="brand meta-text">Mux</td>
-                    <td class="role meta-text">Senior Product Designer</td>
-                    <td class="year meta-text">2020</td>
-                </tr>
-                <tr class="project-details">
-                    <td colspan="5" class="project-details-td">
-                        <div class="project-details-content">
-                            <p class="project-description">
-                                Product design for a real-time dashboard monitoring video streaming performance. Used by CBS and FOX to during the superbowl.                        </p>
-                            <div class="project-thumbnails">
-                                <div class="project-thumbnail">
-                                    <img src="images/real-time-dashboard/real-time-marketing-page.png" alt="Real-Time Marketing Page">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <img src="images/real-time-dashboard/mux-dashboard-screenshot.png" alt="Real-Time Dashboard Screenshot">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <img src="images/real-time-dashboard/interaction-states.png" alt="Interaction States">
-                                </div>
+                    </div>
+                    <div class="brand meta-text">Mux</div>
+                    <div class="role meta-text">Senior Product Designer</div>
+                    <div class="year meta-text">2020</div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            Product design for a real-time dashboard monitoring video streaming performance. Used by CBS and FOX to during the superbowl.                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="images/real-time-dashboard/real-time-marketing-page.png" alt="Real-Time Marketing Page">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="images/real-time-dashboard/mux-dashboard-screenshot.png" alt="Real-Time Dashboard Screenshot">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="images/real-time-dashboard/interaction-states.png" alt="Interaction States">
                             </div>
                         </div>
-                    </td>
-                </tr>
+                    </div>
+                </div>
 
-                <tr class="project-row" onclick="toggleDetails(this)">
-                    <td class="project">
+                <div class="project-row" onclick="toggleDetails(this)">
+                    <div class="project">
                         <span class="toggle-icon"></span>
                         <span class="project-title meta-text">Stream.new</span>
-                    </td>
-                    <td class="brand meta-text">Mux</td>
-                    <td class="role meta-text">Senior Product Designer</td>
-                    <td class="links"><a href="https://stream.new" target="_blank" onclick="event.stopPropagation()">View <span class="arrow">↗</span></a></td>
-                    <td class="year meta-text">2020</td>
-                </tr>
-                <tr class="project-details">
-                    <td colspan="5" class="project-details-td">
-                        <div class="project-details-content">
-                            <p class="project-description">
-                                An open-source project designed while at Mux, stream.new is a tool to upload or record a video and get a sharable link to stream it.
-                            </p>
-                            <div class="project-thumbnails">
-                                <div class="project-thumbnail">
-                                    <img src="images/stream-dot-new/streamdotnew.gif" alt="Stream.new with three dots rotating">
-                                </div>
-                                <div class="project-thumbnail">
-                                    <img src="images/stream-dot-new/streamdotnew-landing.png" alt="Clean white landing page instructing the user to upload a video">
-                                </div>
+                    </div>
+                    <div class="brand meta-text">Mux</div>
+                    <div class="role meta-text">Senior Product Designer</div>
+                    <div class="links"><a href="https://stream.new" target="_blank" onclick="event.stopPropagation()">View <span class="arrow">↗</span></a></div>
+                    <div class="year meta-text">2020</div>
+                </div>
+                <div class="project-details">
+                    <div class="project-details-content">
+                        <p class="project-description">
+                            An open-source project designed while at Mux, stream.new is a tool to upload or record a video and get a sharable link to stream it.
+                        </p>
+                        <div class="project-thumbnails">
+                            <div class="project-thumbnail">
+                                <img src="images/stream-dot-new/streamdotnew.gif" alt="Stream.new with three dots rotating">
+                            </div>
+                            <div class="project-thumbnail">
+                                <img src="images/stream-dot-new/streamdotnew-landing.png" alt="Clean white landing page instructing the user to upload a video">
                             </div>
                         </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

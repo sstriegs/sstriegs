@@ -97,33 +97,38 @@ header {
     margin-top: 60vh;
 }
 
-.projects-table {
-    border-collapse: collapse;
+.projects-grid {
     width: 100%;
-    grid-column: 4 / 13;
+    display: flex;
+    flex-direction: column;
 }
 
-.table-header {
+.grid-header {
     display: none;
     grid-template-columns: repeat(12, 1fr);
     padding-bottom: 0.5rem;
-}
-
-.table-header th {
-    text-align: left;
-    font-weight: normal;
-    font-style: normal;
     color: #5e5e5e;
 }
 
-.table-header th:nth-child(1) { grid-column: 1 / 4; }  /* Project */
-.table-header th:nth-child(2) { grid-column: 4 / 6; }  /* Brand */
-.table-header th:nth-child(3) { grid-column: 6 / 8; }  /* Role */
-.table-header th:nth-child(4) { grid-column: 9 / 12; } /* Links */
-.table-header th:nth-child(5) { grid-column: 12 / 13; } /* Year */
+.grid-header > div {
+    text-align: left;
+    font-weight: normal;
+    font-style: normal;
+}
 
-.table-header th.year-header {
+.grid-header > div:nth-child(1) { grid-column: 1 / 4; }  /* Project */
+.grid-header > div:nth-child(2) { grid-column: 4 / 6; }  /* Brand */
+.grid-header > div:nth-child(3) { grid-column: 6 / 8; }  /* Role */
+.grid-header > div:nth-child(4) { grid-column: 9 / 12; } /* Links */
+.grid-header > div:nth-child(5) { grid-column: 12 / 13; } /* Year */
+
+.grid-header > div.year-header {
     text-align: right;
+}
+
+.grid-body {
+    display: flex;
+    flex-direction: column;
 }
 
 .project-row {
@@ -132,12 +137,7 @@ header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
+    padding: 8px 0;
 }
 
 .project-row:hover {
@@ -145,17 +145,9 @@ header {
     cursor: crosshair;
 }
 
-.project-row td {
-    padding: 8px 0;
+.project-row > div {
     display: flex;
     align-items: center;
-}
-
-.meta-text {
-    font-size: 13px;
-    line-height: 16px;
-    text-transform: uppercase;
-    color: #999;
 }
 
 .project {
@@ -166,58 +158,12 @@ header {
     grid-column: 4 / 6;
 }
 
-.project-title {
-    color: #e0e0e0;
-}
-
-.toggle-icon {
-    display: inline-block;
-    position: relative;
-    transition: transform 0.3s ease;
-    font-family: 'Suisse Intl Mono', Courier, monospace;
-    font-size: 14px;
-    line-height: 1;
-    text-align: center;
-    color: #999;
-    margin-right: 8px;
-}
-
-.toggle-icon::before {
-    content: '+';
-}
-
-.project-row.expanded .toggle-icon::before {
-    content: '–';
-}
-
 .role {
     grid-column: 6 / 8;
 }
 
 .links {
     grid-column: 9 / 12;
-}
-
-.links a {
-    color: #e0e0e0;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    font-size: 13px;
-    line-height: 16px;
-    text-transform: uppercase;
-    font-family: 'Suisse Intl Mono', Courier, monospace;
-    transition: opacity 0.2s ease;
-}
-
-.links a:hover {
-    animation: blink 0.4s infinite;
-    border-bottom: 1px dotted #e0e0e0;
-}
-
-.arrow {
-    margin-left: 3px;
-    font-size: 0.9rem;
 }
 
 .year {
@@ -230,22 +176,19 @@ header {
     display: none;
     padding: 0;
     overflow: hidden;
+    grid-column: 1 / -1;
 }
 
 .project-details.show {
-    display: table-row;
+    display: block;
 }
 
 .project-row.expanded + .project-details {
-    display: table-row;
+    display: block;
 }
 
 .project-details-content {
     padding: 0 0 24px 0;
-}
-
-.project-details-td {
-    padding: 0 !important;
 }
 
 .project-description {
@@ -263,7 +206,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    padding: 0 0 0 18px;
+    padding: 0 0 0 16px;
 }
 
 .project-thumbnail {
@@ -336,9 +279,11 @@ footer {
     a:hover,
     .lightbox-arrow:hover,
     .lightbox-close:hover,
+    .project-row:hover,
     .control-button:hover {
         animation: none !important;
         border-bottom: none !important;
+        background-color: transparent !important;
     }
 
     header {
@@ -386,49 +331,22 @@ footer {
         margin-top: 40vh;
     }
 
-    .projects-table {
+    .projects-grid {
         display: block;
-    }
-
-    .projects-table tbody {
-        display: block;
-    }
-
-    .table-header {
-        display: none;
     }
 
     .project-row {
-        padding: 6px 0;
-        display: grid;
-        grid-template-areas: "project year";
-        grid-template-columns: auto 44px;
-        align-items: center;
-        background-color: transparent !important;
-    }
-
-    .project-row td {
-        padding: 4px 0;
-        vertical-align: middle;
-    }
-
-    .project { 
-        grid-area: project; 
-        width: 100%;
         display: flex;
-        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
     }
 
-    .year { 
-        grid-area: year; 
-        width: auto;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
 
-    .brand, .role, .links { 
-        display: none !important; 
+
+    .project-row > div.brand,
+    .project-row > div.role,
+    .project-row > div.links { 
+        display: none;
     }
 
     .project-description {
@@ -453,13 +371,8 @@ footer {
         display: block;
     }
 
-    .project-details-td {
-        grid-column: 1 / -1;
-        padding: 0;
-    }
-
     .project-details-content {
-        max-width: 100%;
+        padding: 4px 0 24px 0;
     }
 
     .copyright {
@@ -593,4 +506,63 @@ footer {
     text-decoration: none;
     border-bottom: 1px solid transparent;
     margin-top: 1rem;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.meta-text {
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.project-title {
+    color: #e0e0e0;
+}
+
+.toggle-icon {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+    font-family: 'Suisse Intl Mono', Courier, monospace;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    color: #999;
+    margin-right: 8px;
+}
+
+.toggle-icon::before {
+    content: '+';
+}
+
+.project-row.expanded .toggle-icon::before {
+    content: '–';
+}
+
+.links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-family: 'Suisse Intl Mono', Courier, monospace;
+    transition: opacity 0.2s ease;
+}
+
+.links a:hover {
+    animation: blink 0.4s infinite;
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.arrow {
+    margin-left: 3px;
+    font-size: 0.9rem;
 }
