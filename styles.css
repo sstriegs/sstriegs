@@ -97,7 +97,6 @@ header {
     margin-top: 60vh;
 }
 
-
 .projects-table {
     border-collapse: collapse;
     width: 100%;
@@ -578,12 +577,6 @@ footer {
 
 .project-thumbnail {
     cursor: pointer;
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
 }
 
 .error-section {
