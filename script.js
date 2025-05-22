@@ -79,7 +79,20 @@ function updateLightboxContent() {
     }
     
     lightboxContent.innerHTML = '';
+    
+    // Add navigation zones
+    const leftZone = document.createElement('div');
+    leftZone.className = 'lightbox-navigation-zone left';
+    leftZone.addEventListener('click', prevMedia);
+    
+    const rightZone = document.createElement('div');
+    rightZone.className = 'lightbox-navigation-zone right';
+    rightZone.addEventListener('click', nextMedia);
+    
+    lightboxContent.appendChild(leftZone);
     lightboxContent.appendChild(clone);
+    lightboxContent.appendChild(rightZone);
+    
     updateCounter();
 }
 

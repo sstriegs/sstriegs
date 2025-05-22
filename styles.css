@@ -341,8 +341,6 @@ footer {
         padding: 12px 0;
     }
 
-
-
     .project-row > div.brand,
     .project-row > div.role,
     .project-row > div.links { 
@@ -418,6 +416,27 @@ footer {
     position: relative;
     max-width: 90vw;
     max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-navigation-zone {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 1001;
+}
+
+.lightbox-navigation-zone.left {
+    left: 0;
+    cursor: w-resize;
+}
+
+.lightbox-navigation-zone.right {
+    right: 0;
+    cursor: e-resize;
 }
 
 .lightbox-content img,
@@ -476,11 +495,13 @@ footer {
 .lightbox-prev {
     order: 2;
     padding: 5px;
+    cursor: w-resize;
 }
 
 .lightbox-next {
     order: 3;
     padding: 5px;
+    cursor: e-resize;
 }
 
 .lightbox-counter {
