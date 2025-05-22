@@ -205,7 +205,7 @@ header {
 .project-thumbnails {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 12px;
     padding: 0 0 0 16px;
 }
 
@@ -354,11 +354,12 @@ footer {
 
     .project-thumbnails {
         padding-left: 0;
+        gap: 8px;
     }
 
     .project-thumbnail img,
     .project-thumbnail video {
-        height: 80px;
+        height: 100px;
     }
 
     .project-details {
